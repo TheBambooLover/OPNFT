@@ -14,9 +14,11 @@ const Home: NextPage = () => {
                 <h1>Optimism NFT</h1>
                 <Web3Button
                     contractAddress={contractAddress}
-                    action={{contract}} => contract.erc1155.claim(0, 1) //0 es el ID del token. 1 es la cantidad que minteará el botón.
+                    action={(contract) => contract.erc1155.claim(0, 1)} //0 es el ID del token. 1 es la cantidad que minteará el botón.
                 >Claim NFT</Web3Button>
             </main>
         </div>
     );
 };
+
+export default Home;
